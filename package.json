@@ -1,0 +1,61 @@
+{
+  "name": "geniekart",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "prisma generate && next build",
+    "start": "next start --hostname 127.0.0.1",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/validation.test.ts tests/integration.test.ts",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed": "tsx prisma/seed.ts",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "db:local": "tsx scripts/local-db.ts",
+    "admin:local": "tsx scripts/create-local-admin.ts",
+    "db:stop": "tsx scripts/stop-local-db.ts",
+    "assets:concepts": "tsx scripts/attach-concept-assets.ts",
+    "catalog:backup": "tsx scripts/backup-catalog.ts",
+    "catalog:replace": "tsx scripts/replace-catalog.ts",
+    "test:catalog": "tsx --test tests/catalog.test.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.850.0",
+    "@hookform/resolvers": "^3.10.0",
+    "@prisma/client": "6.19.3",
+    "bcryptjs": "^3.0.2",
+    "next": "16.4.2",
+    "nodemailer": "^10.1.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.62.0",
+    "server-only": "0.0.1",
+    "sharp": "^0.35.5",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/node": "^22.18.0",
+    "@types/nodemailer": "^7.0.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "embedded-postgres": "^17.5.0-beta.15",
+    "eslint": "^9.34.0",
+    "eslint-config-next": "16.4.2",
+    "prettier": "^3.9.10",
+    "prisma": "6.19.3",
+    "tailwindcss": "^4.1.12",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "overrides": {
+    "@prisma/config": {
+      "deepmerge-ts": "8.0.2"
+    }
+  }
+}

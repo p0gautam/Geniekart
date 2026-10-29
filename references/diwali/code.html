@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diwali Gifts - Confetti Gifts</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandPurple: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8'
+            },
+            footerSage: '#EBEED6',
+            footerSageText: '#4A533E',
+            bannerPurple: '#f1e6f9',
+            productBorder: '#eceae8',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="base-styling">
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #2b2b2b;
+      background-color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif-title {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- BEGIN: TopAnnouncementBar -->
+<aside class="w-full bg-[#f3e8fa] border-b border-[#e9d5ff] py-1.5 px-4 text-center overflow-hidden" data-purpose="top-announcement">
+<div class="flex items-center justify-center space-x-6 text-[11px] md:text-xs font-normal tracking-wide text-gray-700 whitespace-nowrap">
+<span>48 - 60 Hours Delivery Available*</span>
+<span class="text-purple-400 font-bold">•</span>
+<span>48 - 60 Hours Delivery Available*</span>
+<span class="text-purple-400 font-bold">•</span>
+<span class="hidden sm:inline">48 - 60 Hours Delivery Available*</span>
+<span class="hidden sm:inline text-purple-400 font-bold">•</span>
+<span class="hidden md:inline">48 - 60 Hours Delivery Available*</span>
+</div>
+</aside>
+<!-- END: TopAnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-[0_1px_3px_rgba(0,0,0,0.03)]" data-purpose="site-navigation">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16 md:h-20">
+<!-- Brand Logo -->
+<div class="flex-shrink-0 flex items-center">
+<a class="flex items-center space-x-2" href="#">
+<span class="serif-title text-2xl md:text-3xl font-semibold tracking-wider lowercase text-stone-800">
+              confetti
+            </span>
+</a>
+</div>
+<!-- Center Nav Items -->
+<nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[13px] font-medium tracking-normal text-stone-600">
+<a class="hover:text-purple-700 transition" href="#">Birthday Gifts</a>
+<a class="hover:text-purple-700 transition" href="#">Anniversary Gifts</a>
+<a class="hover:text-purple-700 transition" href="#">Gifts by Relationship</a>
+<a class="hover:text-purple-700 transition" href="#">Gifts By Type</a>
+<!-- Active Diwali Tab -->
+<a class="text-purple-700 font-semibold relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-purple-600" href="#">
+            Diwali Gifts
+          </a>
+<a class="hover:text-purple-700 transition" href="#">Karwa Chauth Gifts</a>
+<a class="hover:text-purple-700 transition" href="#">Make Your Own Hamper</a>
+<a class="hover:text-purple-700 transition" href="#">Bulk Gifting</a>
+</nav>
+<!-- Right Utility Icons -->
+<div class="flex items-center space-x-4 md:space-x-5 text-stone-600">
+<!-- Search / User Icon -->
+<button aria-label="Account" class="hover:text-purple-700 transition">
+<svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Wishlist / Heart -->
+<button aria-label="Wishlist" class="hover:text-purple-700 transition">
+<svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Cart Icon -->
+<button aria-label="Cart" class="hover:text-purple-700 transition relative">
+<svg class="w-5 h-5 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="absolute -top-1 -right-2 bg-purple-700 text-white rounded-full text-[10px] w-4 h-4 flex items-center justify-center font-bold">0</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow">
+<!-- Breadcrumb & Page Titles -->
+<section class="pt-6 pb-2 text-center max-w-[1440px] mx-auto px-4">
+<nav aria-label="Breadcrumb" class="text-xs text-stone-400 mb-2 font-normal">
+<a class="hover:underline" href="#">Home</a>
+<span class="mx-1">/</span>
+<span class="text-stone-600">Diwali Gifts</span>
+</nav>
+<h1 class="serif-title text-3xl md:text-4xl lg:text-[40px] text-stone-900 font-semibold mb-6">
+        Diwali Gifts
+      </h1>
+<!-- CTA Filter Pills -->
+<div class="flex items-center justify-center flex-wrap gap-2 md:gap-3 text-xs md:text-[13px] font-semibold text-purple-800 tracking-wider">
+<a class="border border-purple-400 bg-white hover:bg-purple-50 px-4 py-2 rounded-full transition shadow-xs uppercase" href="#corporate">
+          Corporate Diwali Gifts
+        </a>
+<a class="border border-purple-400 bg-white hover:bg-purple-50 px-4 py-2 rounded-full transition shadow-xs uppercase" href="#categories">
+          Best Categories ▾
+        </a>
+<a class="border border-purple-400 bg-white hover:bg-purple-50 px-4 py-2 rounded-full transition shadow-xs uppercase" href="#services">
+          Services ▾
+        </a>
+<a class="border border-purple-400 bg-white hover:bg-purple-50 px-4 py-2 rounded-full transition shadow-xs uppercase" href="#book-call">
+          Book a Call
+        </a>
+<a class="border border-purple-400 bg-white hover:bg-purple-50 px-4 py-2 rounded-full transition shadow-xs uppercase" href="#catalogue">
+          View Catalogue ▾
+        </a>
+<a class="border border-purple-400 bg-white hover:bg-purple-50 px-4 py-2 rounded-full transition shadow-xs uppercase" href="#enquire">
+          Enquire Now
+        </a>
+</div>
+</section>
+<!-- Toolbar: Counts and Sorting -->
+<section class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 mt-6 mb-4">
+<div class="flex items-center justify-between border-t border-b border-gray-100 py-3 text-xs md:text-sm text-stone-600">
+<span class="font-medium text-stone-700">60 Products</span>
+<div class="flex items-center space-x-2">
+<label class="text-stone-500 font-normal" for="sort-select">Sort by:</label>
+<select class="border-none py-0 pl-1 pr-7 text-xs md:text-sm font-medium text-stone-800 bg-transparent focus:ring-0 cursor-pointer" id="sort-select">
+<option>Featured</option>
+<option>Best Selling</option>
+<option>Price, low to high</option>
+<option>Price, high to low</option>
+<option>Date, new to old</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-10">
+<!-- Card 1 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Aabsha Diwali Gift Box with Brass Diyas and Incense" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0lyrcfzlnsRs7PfTGAJBgIdgls0Aj5uvP-91Lk292Ik2uFJmMiE7wBlQWb1J80eZw2ftZGe1K_mWIEeQsihyIpS0MxAZpYXcC6aqhHSw-Eg0hsVdul03g3gia9bQk6z8LlRmIOyvWH2HKymVjsbzR5dF2Nx4V1av1zaJO4Sdnfhh5r-sF9E5VXK14kKNx579j-Ksh-WBnfOJ8CNMGCd2i5HUBWN43bcq9_lIfOLLr6-vxY4mdCFPl4w"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Aabsha
+          </h3>
+</article>
+<!-- Card 2 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="The Festive Sweetbox" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmojX-m19imlhHqV6XGFuXC_KG9ImJfMM2oIdV_QTnKtheYXF6HpLwaq2sWZVK2g7AtGKKspdnqNV68JvCB3Nn88-svDAI5B2Y00wb3oTYOhQMZF2HAghRgX4GgPPsGAJy7CJuUQv652t1-U4hRkJMaSDDde7Ujne8-JUhu4mgOvCfplyZBjlsjDOkG8xz3pZ88ptxgOENtEd-A1BJNVpBDT2_cGVjMD_WH4VHqWPM2WXXwwBOIbKJ9w"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            The Festive Sweetbox
+          </h3>
+</article>
+<!-- Card 3 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Away From Home Diwali Celebration Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYXGbYvojjvuTOySzTeHHYGG3FY4GOOM-ffmygkiL5W9CNsluloHu3mcKAWA6TldkPaU3gYpsnNhZ0EMUuy8cPs8LDVsYGO8dsrNL9Or_lJ_nVEqLDmJ4KoUdWllnSn88zjURMRMJR42FGhBbeYRG0pryPkeI9QGYo5SUu7A3wZGxyGaBH9-62UnMgfV2AF7oxpOX3YXCfJKfIe0L5okg3WxIoN53lWqYuoqi5JswRg4MZM6uyvi3Psw"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Away From Home
+          </h3>
+</article>
+<!-- Card 4 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Samyogita Traditional Gift Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7ih4pzymj9pj1-4DIeijkOekNLdkC_HWQlC70-L5zqZaemSFV3kbQP9mtHL4kbm10M7bpVykyR7T5TmdBinUdsLXlb2npKBqGhkyDCVBY5I5pO0Qxkl69cQvMONlx-f6yUK8ndkxzc-3vlEZ23gKujrdQHL164H4NvAdIuKRmE-Uudllf1g9TtuVmrWBSOBGneVC09-CxiE37zdtEZuyOpBN-KOtusjcSm4ClKtNe35j7zZDqErKCqw"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Samyogita
+          </h3>
+</article>
+<!-- Card 5 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Utsav Collection Gift Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqotWO6Jd5sDWlZtAdKj6sR1tF4_t0Ef7JM3pjAOIYgHPKIqAo0cUCoa9z6Z-UNWpuo_a2ijchi5DMAFDneyoixpcUOG4rmthrRTWNq3sGZSyU9Y2YLejd3Orn0XWROznTcp3Ew0hcUDXwYIeetVfdJ8J-khjSz5pCeau1yBwLIlSYpmRgb77svTrljgg7jDZE2otbxha124YgAu8VI5e1B6fhoiE9KYowVMW7F-v0l-5MJMsgBTBZeg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Utsav Collection
+          </h3>
+</article>
+<!-- Card 6 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="House of Festivities" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5F43HXqwLY4hiSjJYe1m5sfr7F3tvsl_FyBXGWNQEAT-tgaHZVhWESdnnvLsXYsQPXOYKBrdvJXK0-SafS2YG4WdTmdDbUT4kV-9DFs9G-o8ReToVu-keYd2lrRLepspihRT3BYD5QN04-iH9-LJM5CkCn4rprpXECPULQ8T7WuN8Lf5Z8s_vDDHLBy0M4TweLaVTxsOtwnY88P6Pxr1hpSS9heVQYq87XfAd_ZhKjIqc0iWbXKc3w"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            House of Festivities
+          </h3>
+</article>
+<!-- Card 7 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Mindful Moments Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFqVv3BVZojXfHXNDPeY1j4HGbwhuUeYYZEYgfnLSVQxVCJteklTLnAIAsEGpLOU_2cBw_1HAF9H9ETI_yeDIA4SJi0LQybCHdpLNSgfabogX4Shst0kmBGjCG9nPzVnmFHQrBwrupC0JaelOrTm76QrCseM_KCZwIepGpn-8dQPQuJKR7WlAT3t7wLkVsD1SQxU4WNkGrLI_lwl9nyOABxCCMsRI7rp7hOd4ZHhCd607ud8LYNzsGWQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Mindful Moments Box
+          </h3>
+</article>
+<!-- Card 8 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="The Brew &amp; Bites Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz8xDpRNIqjdridHHU1zWDgyFiolc6wXr-Qe1oVewCl0BXwjvzLP2a0thGIcjyLT_2WFnaYGh9SwtpgzSA-aTQ118Stg--tLUVHNmGf3rMdm8ijY50IL-c9Rx-bCza0GWYIOWkkYDGHbMziS12jwJ6Mb78eLazFFWvizhgq26XEqOM32p8S9FODfNi9l87BVSqC_iriYJD9tlPtg4aLrV8DYq_Vnau5kqcfDg4PERLKl-Ix2iVbfC_EQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            The Brew &amp; Bites Box
+          </h3>
+</article>
+<!-- Card 9 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Deepotsav Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLFfyM5kK_jM9yVJ7zjHImIHpZIRR7149Lf8aaDDfOTsolz70ai82x8I4CHLRLgXmSnUvfvt3y0siX_lCs0KOpuUhXrctjwl0ZKhDQDvkCbmolY5EsyINc7c0P8nUxtb1SKghmltVFwOKqdKTr5vyXeNJyw0l5lDCa887zk0WvfU8cNqPmSQQmHKMO3TqiPxkVC-WFvjlSmIeSoUgYyiZqxesL0thn2aeqe2cl4pNQcRsHlb76Tlfb0g"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Deepotsav
+          </h3>
+</article>
+<!-- Card 10 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Prakash Festive Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjcOnz5ZTJN7BaJ_GhO46D_CiX2jqAKOKiYJ28Jz-2ddWPx_lM6UbkXjlG9IvXk5d22wB_2vcGC3A2K79sZvQZZgS3Cco9PJ1V2ALS-jHrxkLlxjLBuoE-qvqpAvs3L7hswuHe34azsMmR6jKNcfMjx5_ZBgFannztJZYDZCK-CXfISFwRWcoH71Oq7x4U05RQ4Ke-oOQIsu2b0l_IrpXjqKzY3U6yMXKE9CPqhdefSAgy0LliiPdXEg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Prakash
+          </h3>
+</article>
+<!-- Card 11 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Ullas Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsGrM3gsEyLxPmLEKOz9eCcx0LNe1jTAuIC74hKMbmrjXkJpjB50qCrngj3UtacCupk63n17rrfR8tEutwOH0dBy2OJrWdJgXXzuw3-uzVmNfPP0-pW6rgtTxLxZlrn3oiFn1M6QvzJX_mHFkPu6BzfZw7ZBKGfERQTwLu3pFGT-DAiDR2mv1jiK6SfrRyr3D6m0mKBzygAGRPNAEtavyLZUZaD-vfZC6OPx5e494v4yBP5LZ6qgwyZQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Ullas
+          </h3>
+</article>
+<!-- Card 12 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Roshni Festive Gift Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNpSicrEsIOTDFTntwBbaiDTwGJ4Rpa7229e5TZQmKyBPu4aIFTo_17dwNMWW1z3BkIfNdJRbriLi-wVXPEiYQ43IhK5NoEp1HeRCG2M9ytXGW3eyu1bTYF8os1-pZTthQq2DdwAjLt1dRI7KNJonG3GEAp3glNsAY71LukeCtQpV8mImRt1JOI1__8kywp185J5RUuQXdTMT_CbB7I9PGPGgYvD8DtYbod9l5gGbyX0ctKpvDwkxK6w"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Roshni
+          </h3>
+</article>
+<!-- Card 13 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Nimantran Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw1UD1SNt94rsTSgEuH_cXRMs9-C2bZbDb-5lOzBY41dz5nGU9vuiiwsxy8YVTcm3yMoeVsXPLu1QNYw7pRUQExD39129-ootFfYnoLdWPs6hShEDlCeqBRLEfQwaiaNgX4Kv0Er4mtsIOvS9Ex5JeBaVcnZJnDAPuvPiQvWWIZ0HU4-uLJ_1WK6CrLqGPCdH49k3qyFvcOzkm2mYX64M5xgOXQEVrjF5UMTbI8nZh31Brea91YZIgUQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Nimantran
+          </h3>
+</article>
+<!-- Card 14 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Mangalam Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3jEJec0g59hRxkYxI4subiVl4DahaLPWsrowovB8xL5llrpPiRhxXYz72seJlfMN7T3boHMkQTn_hmV6t3GKvIGTEHTXM_2Pc1UDqxcUFVdX_1wkT91xvM4tZHzgmaJ1fRT9ZZleHQhB3aHC0WSdjSTMjVnjZbt4PgifzV-oFYt2k8TS-sz5i-P5VJ91E3gvqBXaan-Z7Jd_CKoox7Z3JWmH-c0wnlluGXroD-E7Eph70BXqPZSiM9Q"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Mangalam
+          </h3>
+</article>
+<!-- Card 15 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="The Pooja Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT8zS3R9VhyQ75arotDENfBEJI0F_pG0QsH6U8HqNTiBuaU3XrA7idD0mGAz0z3Gg-kwDeE2k7UJIZ6KnJ3q4Gs81hynK0qqw3PNIhadEqWp3PF1xKEU1uY-zdRfmz6_rY1ilq-Uav-XBu0RAPr4owct-Xfi-udzu7gW361jAvpKmJ8ojVWDbKnunYHM__rxNIxOoBCiB4mWsEXSq3eIjVhb_PxJGpFjQ0QPmOt6I3vuxXJQprBP8RDg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            The Pooja Collection
+          </h3>
+</article>
+<!-- Card 16 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Shubh Labh Gift Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfsPMaag-mPvPBFbjYTqpk_1qFG_sNPyfIorUdUkQ6-6uSi3vFbjClJnJLv_N7gQ2lNcJQ40cMyaQXSN4OdD8MY3tyGbOqJygYji6sh73S7W5tsYpkQp6RkOt6MrGd9-KnsnFaa3E14w62sqKXHwNJ1MgbYF00JKRsFPF-XQFVkF-USN0RCOawQk8A16CzQ13KLXNtvd-AtFpcQ5xsJQvUahClKkxho_UjjPHKgvcKTdjHM6bV7hsTAQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Shubh Labh
+          </h3>
+</article>
+<!-- Card 17 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Diwali Dryfruit Pack" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnU0cHxMJwBHrPrcQE4-HyZ0FBOy_w1ISAiEQq1Jg8f2fr1KBVjLxpooELLNS8iStAJA-u563lez_cIbJ1LOG61JSqNYwArpqetBQF6Y5w8FmEu07Fzekkmc4mb5Pgq1Wjta85Xr9EsN8tluGwoUbw_DEtBmxMfbInE9Z7LQ8pVEUpe5iGysne4tfzduiQi0FbqT4lpzURbfMyF5yt0n3cYMFl4ctYuTyJ1Ng4Roau5bx2jK0eigbQDQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Diwali Dryfruit Pack
+          </h3>
+</article>
+<!-- Card 18 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Copper Festivity Basket" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq4tdzFycBcaqilLBmhtmfMCp3mOTCB4tlhZ7MskNrK_XXe6i3HvNCACj_vn_ROFcwSuCqIAH39MBUVHNkYHxfTLzkNgSK0NRc7Ezmseslhj2WlwROxFvao_gfaDfw6GVKa72K2s_uvLpPUS_BzSKX3nbh_iwxlV5Ete9pSS1QCxcygaIpxX9U02XvJZDN3b_38TRKBc5NF0V3lfrwOurqMiN1CZhouMABoCfsRY707eYAyENIs45KRg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Copper Festivity Basket
+          </h3>
+</article>
+<!-- Card 19 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Sugandh Fragrance Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbYHMf4Xc9t4K3CYXg95slO6VtoaFRYAOzzt30cwtWtbqMBcHoXQG6LB35GMsMoKFZfiIq7VVznoxGJq863wZIlnkYbyOyPdFvVZEq6YVv_UrUZqEoRDSyFHzoNVs2Ck9UI0ZnZbbJbvLovNC8znSL5CJRVkaSmjklLpxhu-nsA6yKEtHaoBdKVKrcv7vN-YTOjZiRoXuec-cMhbci2rJqTfdWpQObIYWrggpEmtaC2uaUnXB_bCElKg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Sugandh
+          </h3>
+</article>
+<!-- Card 20 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Kari Bliss Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3TYmwqzXcXB_yuj2ivD1xEk6-fNKuuqt1Ooay7tanYqLHd6rgypsyuatqYRpx9O2cijnRd98fooNZaykSJ7_UL2SY8qj24iQ3Qk4J1ZUVLjZkynJtbXvuIq4MOE53vHeXxc2nSgYahD0xqtpZs-Ax0B1d4MTtUbazhbnTphR9pio7CVbCGTLMVbhdLootyktCLZJPMWSFt2K1jslWts62wP8kIyBPNZerctRaYrhd0mvTiv9Ft4Nl2Q"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Kari Bliss Hamper
+          </h3>
+</article>
+<!-- Card 21 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Divine Marble Blessings" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrtzJhNQfnrk0WlukXo1jbHYqjPPbSJgDBYplrOS4qcJs6qmjt0BIX31cVO6EXv7uI8QsQQ8cRtnIagZvUWfK0qL6I0OvPdWRJI3oa7KOSmNyp-q2CuGGQSQY-dy5yGKU5kFIsw8_nP0E7bmECZaMAyun_MKpVOu0FRFAdPpxAd5hYPiDBMBpe30VH-I2BiKZRVps8HTfT1S-xpEzgwlIqZ-5Co8-s-h10aGQuS6ii-APFeqxpCn6-cg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Divine Marble Blessings
+          </h3>
+</article>
+<!-- Card 22 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Diwali Kaju Katli Extravaganza" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK6Vr2k-Ln3817jsGTrPLH93nlsEccYh5UWwsJx-bSZFHm6TtSQbufQoWDPsITNF7_hjQluKf1_wCAPwzLPn8L6Gh-I9csNKU-usqA2qYiNkHhphbeY-Vb8x_Y0DSqmByxVTcuP_UMjNa0DjrQi4fI9w9BY1qUuriMxsEZQk7UrMtEHsJcVBdJOWri5w61pvLYDUzPvl3lTgcpyqtgHcDajvqfwQFqefEpL3JKhTO3qoXRZTulF-x6Dg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Diwali Kaju Katli Extravaganza
+          </h3>
+</article>
+<!-- Card 23 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Celebrations Diwali Delight" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIcgfZAqu_OXoxTdZv38a6XnQapyysKKdK1y-oIIa9rrNo4JjXKJDjgzMQXIlUZDspuYN41DJgcNG0QitzxeFX7FtuMtkkVyq5vArbJKcA61sFtvfkNpK3N5kjQ8O890aY7SHsQ-RkInBF3ASgvKpx0G-4DX3c3ddG-PVZ9x6EaZqKIkS_26GXWR0PuNp8ITzZcHt1X0mXxx5_MCPvJpNx5vxWm9m6xp2BtdTATi4-4wG7lRuUhMxY7g"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Celebrations Diwali Delight
+          </h3>
+</article>
+<!-- Card 24 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Divine Kansa Blessings" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKhTc7mqMhL9KdeD2BvmqYP5crx6YK36NqQz7VGwUyKUdURmwGHkq9mof8uIiEmjxGOFMdNVvqnmNxz5GBr7KJQMesqDSs7QEu_rvqHiIbsqL_ok6Ksxfx3gWOJUfltL5xuMS4NU4QgMacN_yc9CfrO9OvZbMQbB4nTeVU1y5uX4dKUv4A09tHTam8nnNij1xJIxjDWPXVFR4CGwJgXZmVFsdI0-qIqcsqvmpeasgH85_Hze3Jn3OjBQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Divine Kansa Blessings
+          </h3>
+</article>
+<!-- Card 25 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Bandhini Brass Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0L5pz8s5tlED5dYpnPjhVrc5S_MGhLMC4kuMX9YAZLp9KnSY1a74K_SYpvl-C7orrwrHkae7Bb7kpMwzOq5g1sF1Cu9sf6FOmyKC02JezGASx6RhdyllyR4qerWBy2EZv8vPUu_ukAlO6vfej5XK0N_pSvXyIK9AUpVYHoqyKM3Y1PR7ObexES2UIfRswyzvLJAWJvM7_-gdEqAeyf-whemvD0gLYbU6akGkMYMXIMlYPV9hJ33Mzsg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Bandhini Brass Collection
+          </h3>
+</article>
+<!-- Card 26 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Bandhini Diwali Delight" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1qPr11djjbBPlzh8ASdIjYBfYSPMyu84CFi9GDcmj0TcKWFw6zURPcHaCYN5kLoD_V6cDspSjCbvzq9yEQLjUnQZbRBxW05y6wm4Pv5qfJtXwPXsfZaOuetIdl3aR1OkdY0xDXyJjocAtyq2cgFxQn_gyS9AvvBtxgxXLFCeoK3-tJYGYUWPETvB5bDznALOtzba76_WwCwvOFxImr7-9BDh_-thyN6pM-Wa4PQCr7sgYq9t9Jni2Yg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Bandhini Diwali Delight
+          </h3>
+</article>
+<!-- Card 27 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Festive of Prosperity Jar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRLulaoJxws-jVFuD9fDPsySkZEqyDF9lbNfMcWqnLEJv_wtsxaBNdr9dI5t1Pf94aZ1R_2vtMZvTiD7kv8bXveIWfvw8IyS57ygPSM65lz74WYMvE5ii9DeXIJo-7AVUsZD5Qs_s7FxUdmoE-GZQMkcA1jd64z0R9whcjDj7cOrQxdQ8AvWd5MLPSWLS9_Zhsbt5ZcZ3Xt8LfLAIZT2dA9Zs7pRY6OtlrszdYktfcD018pnn6y6se-Q"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Festive of Prosperity Jar
+          </h3>
+</article>
+<!-- Card 28 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Jyoti Celebration Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZNnNb6zl854RYUfIZ8XU9QlXMIOJHC1a_cTyKwk1BqopJ2b11fJtGf7-m5cwz1u6udeLWb8kMtsH_G0Ionpbhr0zzSFIKNYjyhWEOVJkGKS_g378Rj0jP_AUhWrmljdtVYdKU1bMZw-asc_P-fKOJIRjn7-gXttSl4RJiZp6W4eYjIfYHG7DUUaY0a4uWVGKa3T5WP7MKgkRQMtDpCKjJVtvAlHF0WYE8CJzXqDzNdiBpe9zTSSOE9g"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Jyoti Celebration Box
+          </h3>
+</article>
+<!-- Card 29 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Shubh Mithai Trio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByCZ4YMv4TOK7zFMvauQMygSAU44vVr3zD9uf2q0hBBOpeAw6KYwPbxIcn-ClhPf4dSpVdX6WQJ6BFWfH8RcRMIkUPq5B0VNtlFoDYcdCaNdcDNlsSglrcIdUCGJXUfXOJQAYa1x0aEnmKeWVur9EO-BbahOGdRlAF4oPXGOevhWuaEX0bEVLDvBx1tJFPbDmbA1V1nSq61SQN6YlY9HimjTzRPTkiFDkDTIzyAYBTHtXxbH8i28Zvng"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Shubh Mithai Trio
+          </h3>
+</article>
+<!-- Card 30 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Shubh Deepawali Treasure" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAovxIDoHsa25BwzkzjRNIqhskrtgQzzO_XgARdKYt4apSY794m4qcr05jZV_iz8dik8bWoXyvVzvRW-LxEiwGMg8xG2NIYJKf3mgGoCi-M5Pl-6rj2cmgaPVtBqIWQBMsvneYy0e8Anes3unkOwbSFC-odlht3YtxE5kzsZBCootEdhBaoqXjlYf1NR531YZ7Kj2UneakAH70RGL98QMz5v9tfCt2FJaPTCy0Eo9FImFYqnHvHnFUUKA"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Shubh Deepawali Treasure
+          </h3>
+</article>
+<!-- Card 31 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Radiance of Diwali Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxhOgbjLxSgSzobVMyIvbtIUwfNmQjTFodUHSN0Two3kp4M8vAmka4xyY-U2t3lUV3PdA7PMrSq92TSKAG5erhNhS5zovFUotRm-q3U9wxDAAwqpDaRRlPJibLA8tAya5aVX-6VahASQvEbk6Eic6xd2w2AKI5Jdvn3-RalHv2EZRjhk-45GadRmLDdDiWoodcVZ-fkWuBydPWV-rZWZgS6yr4RvqQYmVU8fORT5AVcKBb8aWytJHoxA"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Radiance of Diwali Collection
+          </h3>
+</article>
+<!-- Card 32 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Ananda Diwali Package" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfNufcwZQtyjmGfXueu9JB0noVjgyMqev3_43FljOqOsVeCZPTzx9a3za7RLCn9_6isVyNOPBfETPPr_25nbmDglpEnTUPe38WM-gZx3l3gKn-C3doWmwGJgAS6Ngyf3_4UNHPqSsQLRcCBOz05XhqjEa1l80vJfE_BbcLHEIb8CdY1xqV9RxoiSRl4Iv29e5j4e_VBOPHar9S6aQYijmV06XV1XrbslOv-hczueUxo2Nna0pSfHA1aQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Ananda Diwali Package
+          </h3>
+</article>
+<!-- Card 33 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Earth-Friendly Diwali Delights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYNyqQObtQFeMQnF7VterhJTk9yaTxWtHpoBon589cryMKKUepp9z1y8vmx0_ktWDjR1YgJcRXaJg6YIbY2Asj6OadWhmIEaPfP3wgAIht1SgDrDYmpOOjGIovjs6dBvHYRiBKiwjVRP2Nw8g_ZWqQobNn2z8LxmGmsKdreJF29BfG-nYF1QIM3YZr-ZEmXnV2Sz_TQMsH_IGfuCerEDRzzEWO4ZyrsEK5sYodZcmXrABsOcDV9TiFYA"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Earth-Friendly Diwali Delights
+          </h3>
+</article>
+<!-- Card 34 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Festive Flavors &amp; Treats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNRmcNrczffC-jonVZtF6GZ1kjbp5-Po7W4eF2ocLOZ5FwgCpcvTNFzbd-U3iNm_Iu6W_Nb8fhXVV0Ai6bfYd9S09RDxbS2hkSO0kvF35OdIzowz1MD761L53sCBhKrhOB2Trpl-MmdkqR7_HrLVkQ-1d37eYHP-JQg3KNYL4HW9R8mJrj6OLwyj-E_nn6VtVfRm8_3XT18omd5ogTp0gC-0Id7f0ZbMD5d1dz6fpcfhUddGELrbQNMw"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Festive Flavors &amp; Treats
+          </h3>
+</article>
+<!-- Card 35 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Diwali Joyful Crunch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMIq9el6qgGQMDLP1intNeksfkqCA7JJDFwEUdKhVYMpxGX4vHAe0N6r-p9T3FpF4q9vNu3fOdg9tLNloitrtxxFSFK_ztrNL0yjo68xYRZO5tgwaaEDeiK73JObAgQpa3bkemvr581u5IJygjTpg7NWwN63q4LJSozbTongloNcIE4zE6Ywg-IyrIFdhUI3_8P3tMaBhxlYRzypWbuE1CsGGFbTxXtJSe1R1n01QCJShBzs6eBj0kcg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Diwali Joyful Crunch
+          </h3>
+</article>
+<!-- Card 36 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Royal Indulgence Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm7pK-MHAW_XGPopScVlrx2ocUNFDooLo3cEa6minnW2zWpxfkzxEad1dqt6y7oLxDtuwYmawTW4GiGT2PWiZDeEE0pQihr1vxSssHecPmJkgPjSIST_D9wPYtbrqd1jHGMdFiZOrX0G-VuqXcfjqbE2QH_AD7x9UmRJUNI3TyntHbvQrPq3P5V1NqsWxofoMMtHpbqjpuog2--KgvK4zZMo5Rkjj8_XUdJPvkX2-weVKf-u4buYr_QQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Royal Indulgence Box
+          </h3>
+</article>
+<!-- Card 37 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Golden Aura Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI-gI4DIpfiCG8gYt8_HUgxp4xxNFc9-0Pjg-G_FUtz7ujbsdRkUylwhHfQwX43PLNc_W5tfbpeREmi2iw0LJMlLkMAXMdAU1mdrG61nMpsEGsw2Jr53DgcHSOEbfxsMqlA-u0tFNlUPfGJD3Qkwib1xzhf3QCfHRr03HyMBuPKw8iv4wSMHnv5ppBcGNWcjmYy-oZV5Q0OszeDCRpl489Zys7VtHvZlqYKuOQuZ2f-pY-A-9TNedCKg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Golden Aura
+          </h3>
+</article>
+<!-- Card 38 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Timeless Joy Gift Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb6dIDlOAp95iPZBgSxBLgRTTyRcOtde1lWNprsJlIV-LLiJ79xa7srtRj_JMSnu7hQxdTT8Iccr1PVLfZtg_qqtU_YKEYzjXeOT2TZs2sSYQDGv5JTO2srm2puolAoSuQRkrmEE2x5ZQfy2pASlaADAF4HpAvt0uYl5BOc_A-Em07UDONZgc0R1zec1X4D4gHa3UKqm9ONOegxwE5ZuGRET-mPugEOq9-oJXFHHjX60gZgmIPIJRbRQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Timeless Joy Gift Box
+          </h3>
+</article>
+<!-- Card 39 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Timeless Festive Treasures" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxGRABhknYG77DHZtg-uZ3Z2eMH0z-BzoICOWWiupWoKJDRYloi_RamfLpdF7I-H_xPcKM6iSE6rdTsYrnnBR4BTRXd0PTPDx1O3zIL0HYqzKgJfEczY8cjNxNBrxXig14E7d_q_2dlPuZem2EuQ0F0ZgpBnqmgUnv9upjXhgdQLsvh3pK56sJdUFknEvyL52Y-RaEOnso_lgW7ecAoAFFseLm1WSlwC0oLK0aXKBf8H4eWjCv2NAKQA"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Timeless Festive Treasures
+          </h3>
+</article>
+<!-- Card 40 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Eco Luxe Experience" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfTaYYoRoHwm86hEfRh-KXt4ZeLSVxOCPWw7sVjuST7_R_X475O62GR_Vd-NjLaFJ9nsLMy2OoYUL5R3y673jxCZbypUnB0QTf1o_CF-v06oqr2fJsk6esLznCMtYdFjdlM2T8r3nhVLdo-UiDdz3a-o8PgkA3iENP81hFse3KA1B6nCwXpVqed6HvDc2B3kxogNraNpxe-A44ValHaetDmCFQt49--BOC2I6Uqk-mdhQ743YFniO1Jg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Eco Luxe Experience
+          </h3>
+</article>
+<!-- Card 41 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Divine Bliss Hamper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3laX3z70hbrkwvCmPfJe2LXVwEzEyBJ246mreRZjiAr-tEodS82BYFaFLL2V_D2FIUfAzGCpTNeBdMwuP5LdWP30tkwtZ2Dh8SCTweuo4nBDpRZAaL8v2L17tJn37jnU3AecTAK36JO-hxoHwaQ3ZsUTDk4nqDnwyywfC2uKWcvUrmYUkHVEQAnDDx1NmnrJYFYf4ahvdyBK3zOdLfSZC5lHTqd0Qu89YGgb9py43WPQGq3WH1XoYjQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Divine Bliss Hamper
+          </h3>
+</article>
+<!-- Card 42 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Bake-a-Bite Bundle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbZ0tr9K2rPp-8Qo5E3Cmj1qD4OBS_zBm-n7WBLkZCYorDtJPxULU0BqCVcw0RrBTvm1eDTioy2gdPEMdXwVQIbbin9oxwSxrQhYj6mmO3qwIpymeWQaKTJOcvfFqNtGq84Sos80zQDrrRzEvIottt-A-N98HACwhJzxl7Yo-ahLp9HFrpUirDkRV1D-hg49N2W4PHZyLbOgU_Ad5sorl7tASqZcIDqYIpOyypBHB_c8s2flWGwYoULA"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Bake-a-Bite Bundle
+          </h3>
+</article>
+<!-- Card 43 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Vintage Luxe &amp; Nutty Affair" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC41-o78FeWJYbX61AUnj_kTlmPbkIrqjDL487q3mJUwMZqhOWaxpMTYw91YxDQOUp3iXFuux3ft4vLDW7rsRv98BTZAo5gyjQldkj1-odr0oYB2zrs1bH9rOLlpobjb-hk-9jLAo9zt9y3lexXUi8zAKzHVMYPZrbg1HGZAPzwgP7MBQAn0x-rvfGQutY7EccIU8447y9e46n_Gv31MxBP37MB8hHrDMpfuJeDdHqkZTTtEbHcg3t-Q"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Vintage Luxe &amp; Nutty Affair
+          </h3>
+</article>
+<!-- Card 44 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Pure Peace &amp; Prosperity" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaWPFJYfX3Kr_LAkDwupipsJx0apQ8KoI7z-ClVS1C1PUYhFCm19qyyKsPiDJxlM2SQCjTgscZNVYCnKjblZe495FOOgzSp2yQvRLmvUEPTw-1MOLlq_r5y0R3XX5kjGMZ8c7zz7onRNltE5HGYVba_JO4vH7ZomIEt19w1wmFJf-pv6TS6bWYmIhLSvCH3tPce_VFmVX7jtQVNfeY52xymrlJms857hqyyuVxtovak5SGZbBalafa7A"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Pure Peace &amp; Prosperity
+          </h3>
+</article>
+<!-- Card 45 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Golden Delight Gift Box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPmhi59MzP-5QoQRIcbKc3hTjgpWXqyVabBszECoUN0edJyOygooOZWB1AZH1BbnzUcdidKdtLXgYYXp98CIPMthaC43G6AiwuKC2E01MCHAgT2I1JIanblpA5tsblMGKw530wum0AS0NMLutftAbREUjhibyBUKEPVd6G7sVD_90afmu0jd6vF-WVH5vcKRruBxXQqnS5TIyc4ItQfNSuvK-E4znzG-ovm2dlZo7XfvwZyE7YrSOU3A"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Golden Delight Gift Box
+          </h3>
+</article>
+<!-- Card 46 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Khushi Utsav" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-p41aqfnkoce4y02rACz9r1r9OBBJQWoG6pNrc9hvgtleRTXN2nqEXWTDODb-XXb_sIxn3LQpv3WdjFSrx4rBKsKV6nYLrq2ZCxEnM4AFxLlsdOFdpCd5AHz1djCqHCSBWx-cDT7HhzrH6_jBKIs6Z5nXCYZnVhuu2u-7ijtp30YDy2BupLvZBMpJUAlkBmvz31zzSylRKtlCgzv476O4BF3JJr58F_aAAzaC-BaEgIyhPkbqRqH1qg"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Khushi Utsav
+          </h3>
+</article>
+<!-- Card 47 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Diwali Delight Basket" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4RAizQfP7asIoA2fFM1byzZf215rm7kLHG9GUc-TicdzPd-mhf-94TLzSrs8RJnFxQ6PTAxShVCjRyDGujC_K_Ci6oCCZ_ozrG1xNqcgmKhgHGglyEAxQ0R5o8F41c2RMlpD5SazFh7Z-yaLq0TJqLT1nswzY8vpj50L-NrOB63teOjKYav7gF6jeS_qti-vEY2unDgJLYYXh2dci8hXWIWYYZkTM4y4tMhumO_oYABqlv6U0G2PJJA"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Diwali Delight Basket
+          </h3>
+</article>
+<!-- Card 48 -->
+<article class="group flex flex-col items-center">
+<div class="w-full aspect-square rounded-xl overflow-hidden bg-stone-100 border border-gray-100 shadow-sm transition duration-300 group-hover:shadow-md">
+<img alt="Deepavali Delight" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXOl89C89cViRo68maydlVb6weRhgX9JpXM1Qgu0L0ervvuPgr1caaahrZ2nJdX4z4zBvYKMQFz4I6lIQwt2d5ul1VlJPS-pK_eUBXyw2beFcyS4mySMXtP0R7qkE05e_6TP48RI-tp27bomEswfsyP_VwVj9IHAp_eH7p06OZ1Rw4LvWAuhbI_41Ket3xPoo_jYlLQmQcy-0CZPgo9xljBxukojL7nDX0v1VXpMloVGckjFl7nYo1GQ"/>
+</div>
+<h3 class="mt-3.5 text-xs sm:text-[13px] font-medium text-stone-800 tracking-wide text-center group-hover:text-purple-700 transition-colors">
+            Deepavali Delight
+          </h3>
+</article>
+</div>
+</section>
+<!-- BEGIN: ReadMoreSection -->
+<section class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200">
+<div class="text-stone-700" data-purpose="expandable-content">
+<button class="text-sm font-semibold tracking-wide text-stone-900 flex items-center hover:text-purple-700 transition-colors" id="toggle-read-more">
+<span>Read more</span>
+<svg class="w-4 h-4 ml-1 transition-transform" fill="none" id="arrow-icon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="hidden mt-4 text-xs md:text-sm text-stone-600 leading-relaxed max-w-4xl space-y-3" id="read-more-text">
+<p>
+            Diwali is the festival of lights, joy, and meaningful connections. Our collection of Diwali Gifts and Festive Hampers has been crafted with love and sophistication to make celebrations truly memorable. From artisan brass diyas, handcrafted sweets, organic dry fruits, to custom-engraved keepsakes, Confetti offers thoughtful hampers tailored for family, friends, and corporate partnerships.
+          </p>
+<p>
+            We ensure pan-India reliable delivery within 48 to 60 hours, custom branding opportunities for corporate bulk gifts, and eco-friendly sustainable gift packages that light up homes and hearts.
+          </p>
+</div>
+</div>
+</section>
+<!-- END: ReadMoreSection -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: SiteFooter -->
+<footer class="bg-[#e9eed6] text-stone-700 pt-12 pb-8 border-t border-stone-200" data-purpose="site-footer">
+<div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Footer Nav Links Column -->
+<div class="flex flex-col space-y-2.5 text-xs md:text-sm font-medium">
+<a class="font-semibold text-stone-900 mb-1" href="#">The Company</a>
+<a class="hover:text-purple-800 transition" href="#">About Us</a>
+<a class="hover:text-purple-800 transition" href="#">Blogs</a>
+<a class="hover:text-purple-800 transition" href="#">Stories</a>
+<a class="hover:text-purple-800 transition" href="#">Articles</a>
+<a class="hover:text-purple-800 transition" href="#">Contact Us</a>
+</div>
+<!-- Footer Bottom Bar: Copyright & Socials -->
+<div class="mt-12 pt-6 border-t border-stone-300/60 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-600 gap-4">
+<div>
+          Copyright © 2024 Confetti Gifts. All rights reserved.
+        </div>
+<!-- Social Media Icons -->
+<div class="flex items-center space-x-4">
+<!-- Instagram -->
+<a aria-label="Instagram" class="text-stone-700 hover:text-purple-800 transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</a>
+<!-- Facebook -->
+<a aria-label="Facebook" class="text-stone-700 hover:text-purple-800 transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path>
+</svg>
+</a>
+<!-- YouTube / Pinterest -->
+<a aria-label="YouTube" class="text-stone-700 hover:text-purple-800 transition" href="#">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+<!-- BEGIN: InteractiveHandlers -->
+<script data-purpose="toggle-read-more">
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleButton = document.getElementById('toggle-read-more');
+      const content = document.getElementById('read-more-text');
+      const arrow = document.getElementById('arrow-icon');
+
+      if (toggleButton && content && arrow) {
+        toggleButton.addEventListener('click', function () {
+          const isHidden = content.classList.contains('hidden');
+          if (isHidden) {
+            content.classList.remove('hidden');
+            arrow.classList.add('rotate-180');
+          } else {
+            content.classList.add('hidden');
+            arrow.classList.remove('rotate-180');
+          }
+        });
+      }
+    });
+  </script>
+<!-- END: InteractiveHandlers -->
+</body></html>

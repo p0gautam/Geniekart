@@ -1,0 +1,45 @@
+export const enquiryStatuses = ['New', 'Contacted', 'Quoted', 'Closed'] as const;
+export type EnquiryStatus = (typeof enquiryStatuses)[number];
+export type EnquiryActivity = {
+  id: string;
+  kind: string;
+  created_at: string;
+  actor_id: string | null;
+  actor_name: string | null;
+  previous_status: string | null;
+  new_status: string | null;
+  note: string | null;
+  source_page: string | null;
+  selected_combo_name: string | null;
+};
+export type Enquiry = {
+  id: string;
+  submission_id: string;
+  created_at: string;
+  updated_at: string;
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  quantity: number;
+  city: string | null;
+  budget: string | null;
+  occasion: string | null;
+  message: string | null;
+  consent: boolean;
+  consent_at: string;
+  selected_combo_id: string | null;
+  selected_combo_name: string | null;
+  source_page: string;
+  status: EnquiryStatus;
+  utm: Record<string, string>;
+  legacy_status?: string | null;
+  activity?: EnquiryActivity[];
+  notification?: { sent_at: string | null; last_error: string | null; attempts: number } | null;
+};
+export type EnquiryList = {
+  rows: Enquiry[];
+  total: number;
+  counts: Record<EnquiryStatus, number>;
+  occasions: string[];
+};
