@@ -1,5 +1,6 @@
-import type { NextConfig } from 'next';
-const config: NextConfig = {
+// Plain ESM avoids TypeScript config transpilation on hosting build workers.
+/** @type {import('next').NextConfig} */
+const config = {
   poweredByHeader: false,
   images: { remotePatterns: [{ protocol: 'https', hostname: 'lh3.googleusercontent.com' }] },
   async headers() {
