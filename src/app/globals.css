@@ -1452,11 +1452,101 @@ td button {
  .mobile-menu .gifting-nav > button { padding:12px 0; font:inherit; width:100%; text-align:left; }
 }
 @media(max-width:600px) { .card-footer .quote-card-button { width:100%; } }
-@media (max-width:600px) {
- .product-grid { grid-template-columns:minmax(0,1fr); }
- .product-card .card-copy h3 { font-size:20px; }
- .product-card .card-copy p { font-size:16px; }
- .card-footer > span { display:block; }
-}
 .gifting-nav > button { display:inline-flex; align-items:center; gap:6px; }
 .gifting-chevron { display:block; width:1em; height:1em; flex-shrink:0; }
+
+/* Public mobile layout; desktop and admin typography remain unchanged. */
+#services .service-card p:last-child,
+#benefits .service-card p:last-child { margin-bottom:0; }
+@media (max-width:900px) {
+ .mobile-menu nav { padding:12px 16px; max-height:min(70dvh, calc(100dvh - 12rem)); overscroll-behavior:contain; }
+ .mobile-menu nav > a,
+ .mobile-menu .gifting-nav > button {
+   display:flex; align-items:center; min-height:48px; width:100%;
+   padding:12px; font-size:1rem; font-weight:500; line-height:1.5;
+   text-align:left; gap:12px;
+ }
+ .mobile-menu .gifting-chevron { margin-left:auto; }
+ .mobile-menu .gifting-options { padding:4px 0 4px 16px; }
+ .mobile-menu .gifting-options a {
+   padding:12px; min-height:48px; font-size:.9375rem; line-height:1.5;
+   overflow-wrap:anywhere;
+ }
+ .mobile-menu > button { min-width:44px; min-height:44px; }
+}
+@media (max-width:767px) {
+ .public-site { font-size:.9375rem; line-height:1.6; }
+ .public-site .container { width:calc(100% - 28px); }
+ .public-site h1, .public-site .hero h1, .public-site .catalog-head h1,
+ .public-site .legal-page h1 { font-size:1.875rem; line-height:1.2; margin-bottom:12px; }
+ .public-site h2, .public-site .faq h2, .public-site .founder-content h2,
+ .public-site .legal-page h2 { font-size:1.5rem; line-height:1.25; margin-bottom:12px; }
+ .public-site h3, .public-site .service-card h3 { font-size:1rem; line-height:1.35; }
+ .public-site p { margin-bottom:16px; }
+ .public-site .hero-description, .public-site .section-heading p,
+ .public-site .service-card p, .public-site .portfolio-panel p,
+ .public-site .catalog-head p, .public-site footer p,
+ .public-site footer a, .public-site footer .text-button,
+ .public-site .faq summary, .public-site .faq details p { font-size:.9375rem; line-height:1.6; }
+ .public-site .section { padding:36px 0; }
+ .public-site .section-heading { margin-bottom:24px; }
+ .public-site .hero { padding:28px 0 32px; }
+ .public-site .hero-grid { grid-template-columns:minmax(0,1fr); gap:0; }
+ .public-site .hero .quote-panel { display:none; }
+ .public-site .hero-pill { margin-bottom:16px; font-size:.75rem; }
+ .public-site .hero-description { margin:16px 0 22px; }
+ .public-site .hero-image > img { height:auto; aspect-ratio:1; object-fit:contain; }
+ .public-site .hero-image > div { padding:16px; }
+ .public-site .hero-image p { font-size:.9375rem; margin-bottom:0; }
+ .public-site .category-pills { gap:8px; margin-bottom:24px; }
+ .public-site .category-pills a { padding:10px 14px; min-height:44px; font-size:.875rem; }
+ .public-site .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 10px; }
+ .public-site .product-card { min-width:0; border-radius:12px; }
+ .public-site .card-copy { padding:12px 10px 8px; }
+ .public-site .product-card .card-copy h3 { font-size:.9375rem; line-height:1.35; margin:0; overflow-wrap:anywhere; }
+ .public-site .card-copy p, .public-site .card-footer > span { display:none; }
+ .public-site .card-footer { padding:8px; }
+ .public-site .card-footer .quote-card-button {
+   display:flex; justify-content:center; align-items:center; min-height:44px;
+   padding:10px 6px; font-size:.875rem; line-height:1.4; white-space:normal;
+ }
+ .public-site .service-card { padding:20px 12px; min-width:0; }
+ .public-site .service-icon { font-size:28px; margin-bottom:12px; }
+ .public-site .services-grid, .public-site .benefits-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+ .public-site .service-card .pill { display:inline-block; min-height:44px; padding:10px; font-size:.875rem; }
+ .public-site .portfolio-panel { grid-template-columns:minmax(0,1fr); padding:20px; gap:20px; }
+ .public-site .founder-panel { padding:20px; gap:24px; }
+ .public-site .founder-contacts { grid-template-columns:minmax(0,1fr); margin:20px 0; }
+ .public-site .catalog-head { padding:12px 0; }
+ .public-site .breadcrumbs { margin:20px 0; }
+ .public-site .catalog-toolbar { display:grid; grid-template-columns:minmax(0,1fr); gap:12px; margin:20px 0; }
+ .public-site .catalog-toolbar label { min-width:0; }
+ .public-site .catalog-toolbar .button { height:auto; min-height:44px; }
+ .public-site .pagination { flex-wrap:wrap; gap:10px; margin:28px 0; }
+ .public-site .pagination a { min-height:44px; }
+ .public-site .contact-grid { grid-template-columns:minmax(0,1fr); padding:32px 0; gap:24px; }
+ .public-site .contact-grid > div { min-width:0; overflow-wrap:anywhere; }
+ .public-site .quote-panel { padding:20px 16px; }
+ .public-site .quote-panel .form-grid { grid-template-columns:minmax(0,1fr); }
+ .public-site .final-cta { padding:36px 0; }
+ .public-site .nav-row { height:auto; min-height:70px; gap:8px; flex-wrap:wrap; padding:10px 0; }
+ .public-site .site-header .brand { font-size:1.25rem; gap:6px; }
+ .public-site .site-header .brand img { height:38px; }
+ .public-site .nav-row > .button { font-size:.75rem; padding:10px; min-height:44px; }
+ .public-site .announcement { font-size:.6875rem; line-height:1.5; }
+ .public-site .faq summary { gap:16px; }
+ .public-site .footer-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 16px; }
+ .public-site .prose { padding:32px 0 40px; }
+ .enquiry-dialog { padding:12px 18px 24px; max-height:calc(100dvh - 24px); scroll-padding:60px 0 24px; }
+ .enquiry-dialog .close { position:sticky; display:block; margin-left:auto; top:0; right:auto; z-index:1; background:white; border-radius:50%; }
+ .enquiry-dialog h2 { font-size:1.5rem; }
+ .enquiry-dialog .context, .enquiry-dialog label, .enquiry-dialog .form-foot { font-size:.875rem; overflow-wrap:anywhere; }
+ .enquiry-dialog .form-grid { grid-template-columns:minmax(0,1fr); }
+ .public-site input, .public-site select, .public-site textarea,
+ .enquiry-dialog input, .enquiry-dialog textarea { font-size:1rem; }
+}
+/* Reflow at very narrow effective widths (for example, high browser zoom). */
+@media (max-width:19rem) {
+ .public-site .product-grid, .public-site .services-grid,
+ .public-site .benefits-grid, .public-site .footer-grid { grid-template-columns:minmax(0,1fr); }
+}

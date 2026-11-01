@@ -165,9 +165,9 @@ export default async function Home({
                           <Link className="pill lavender" href={card.href}>
                             Explore →
                           </Link>
-                        ) : (
+                        ) : !['services', 'benefits'].includes(s.kind) ? (
                           <QuoteButton className="pill lavender">Know More</QuoteButton>
-                        )}
+                        ) : null}
                       </article>
                     ))}
                   </div>

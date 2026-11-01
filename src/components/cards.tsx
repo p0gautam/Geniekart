@@ -54,7 +54,7 @@ export function ProductCard({
                   ? `${url.replace('-1024', '-480')} 480w, ${url.replace('-1024', '-768')} 768w, ${url} 1024w`
                   : undefined
               }
-              sizes="(max-width: 600px) 90vw, (max-width: 1000px) 45vw, 25vw"
+              sizes="(max-width: 767px) 46vw, (max-width: 900px) 45vw, 25vw"
             />
           ) : (
             <div className="image-placeholder">Photography coming soon</div>

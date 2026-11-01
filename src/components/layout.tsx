@@ -11,7 +11,7 @@ export async function PublicLayout({ children }: { children: React.ReactNode }) 
   const footer = navigation.filter((n) => n.location === 'footer');
   return (
     <EnquiryProvider>
-      <div style={{ '--red': s.primaryColor } as React.CSSProperties}>
+      <div className="public-site" style={{ '--red': s.primaryColor } as React.CSSProperties}>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
