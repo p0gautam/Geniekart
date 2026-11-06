@@ -5,6 +5,7 @@ import { EnquiryProvider, QuoteButton } from './enquiry';
 import { WhatsApp } from './client';
 import { HeaderNavigation } from './header-navigation';
 import { occasions } from '@/lib/occasions';
+import { BrandLogo } from './brand-logo';
 export async function PublicLayout({ children }: { children: React.ReactNode }) {
   const s = await settings();
   const navigation = await db.navigationItem.findMany({ orderBy: { position: 'asc' } });
@@ -19,22 +20,8 @@ export async function PublicLayout({ children }: { children: React.ReactNode }) 
         <header className="site-header">
           <div className="container nav-row">
             <Link href="/" className="brand" aria-label={s.companyName + ' home'}>
-              {s.logo ? (
-                <>
-                  <img src={s.logo} alt="" />
-                  <span>{s.companyName.toLowerCase()}</span>
-                </>
-              ) : (
-                <>
-                  <span className="brand-mark">
-                    g<span>✦</span>
-                  </span>
-                  <span>
-                    {s.companyName.toLowerCase()}
-                    <small>CORPORATE GIFTING</small>
-                  </span>
-                </>
-              )}
+              <BrandLogo src={s.logo} />
+              <span>{s.companyName.toLowerCase()}</span>
             </Link>
             <HeaderNavigation />
             <QuoteButton>{s.cta}</QuoteButton>
