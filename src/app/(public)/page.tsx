@@ -5,6 +5,8 @@ import { pageSections, settings, productInclude } from '@/lib/data';
 import { currentUser } from '@/lib/auth';
 import { EnquiryForm, QuoteButton } from '@/components/enquiry';
 import { ProductCard } from '@/components/cards';
+import { DeliveryInfo } from '@/components/delivery-info';
+import { minimumOrderQuantity } from '@/lib/validation';
 export async function generateMetadata() {
   const s = await settings();
   return {
@@ -45,6 +47,7 @@ export default async function Home({
     }),
   ]);
   const hero = sections.find((s) => s.kind === 'hero')?.content;
+  const genericHero = hero?.title === 'Corporate gifting' && !hero.subtitle;
   const catalogCopy = sections.find((s) => s.kind === 'catalog')?.content;
   const faqCopy = sections.find((s) => s.kind === 'faq')?.content;
   const reviewCopy = sections.find((s) => s.kind === 'reviews')?.content;
@@ -63,12 +66,14 @@ export default async function Home({
                 <i />
                 {hero.eyebrow}
               </span>
-              <h1>
-                {hero.title}
-                <br />
-                <em>{hero.subtitle || 'like never before.'}</em>
+              <h1 className={genericHero ? 'hero-heading-compact' : undefined}>
+                {genericHero
+                  ? 'Curated Corporate Welcome Kits & Festive Hampers with Custom Branding'
+                  : hero.title}
+                {!genericHero && <><br /><em>{hero.subtitle || 'like never before.'}</em></>}
               </h1>
               <p className="hero-description">{hero.description}</p>
+              <DeliveryInfo />
               <div className="hero-image">
                 {hero.imageUrl && (
                   <img src={hero.imageUrl} alt={hero.imageAlt} fetchPriority="high" />
@@ -83,7 +88,7 @@ export default async function Home({
               <span className="eyebrow">YOUR CORPORATE GIFTING BRIEF</span>
               <h2>{hero.ctaLabel}</h2>
               <p>{hero.formDescription || 'Share a few details for a personalised proposal.'}</p>
-              <EnquiryForm />
+              <EnquiryForm compact />
             </div>
           </div>
         </section>
@@ -244,7 +249,9 @@ export default async function Home({
               {f.question}
               <span>+</span>
             </summary>
-            <p>{f.answer}</p>
+            <p>{f.question === 'What is the minimum order quantity?' && f.answer === 'Minimum quantities vary by product and customization. Tell us your requirements for a tailored quote.'
+              ? `The minimum order is ${minimumOrderQuantity} kits. Tell us your requirements for a tailored quote.`
+              : f.answer}</p>
           </details>
         ))}
       </section>

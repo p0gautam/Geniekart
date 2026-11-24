@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { QuoteButton, track } from './enquiry';
 import type { IncludedProduct } from '@/lib/combo';
+import { minimumOrderQuantity } from '@/lib/validation';
 export function MobileMenu({ items }: { items: { id: string; label: string; href: string }[] }) {
   const [open, setOpen] = useState(false);
   return (
@@ -39,7 +40,7 @@ export function WhatsApp({
       rel="noreferrer"
       onClick={() => track('whatsapp_click', { item_name: name || 'general' })}
     >
-      {floating ? '◉ WhatsApp' : 'Chat on WhatsApp ↗'}
+      {floating ? 'Instant Catalog on WhatsApp' : 'Chat on WhatsApp ↗'}
     </a>
   );
 }
@@ -80,7 +81,7 @@ export function DetailActions({
   name,
   isPackage,
   packaging,
-  minimumOrder = 1,
+  minimumOrder = minimumOrderQuantity,
   includedProducts = [],
   isCombo = false,
 }: {
@@ -92,7 +93,8 @@ export function DetailActions({
   includedProducts?: IncludedProduct[];
   isCombo?: boolean;
 }) {
-  const [quantity, setQuantity] = useState(minimumOrder);
+  const effectiveMinimum = Math.max(minimumOrderQuantity, minimumOrder);
+  const [quantity, setQuantity] = useState(effectiveMinimum);
   const [pack, setPack] = useState('');
   useEffect(() => track('view_item', { item_id: id, item_name: name }), [id, name]);
   return (
@@ -101,9 +103,9 @@ export function DetailActions({
         Number of gifts
         <input
           type="number"
-          min={minimumOrder}
+          min={effectiveMinimum}
           value={quantity}
-          onChange={(e) => setQuantity(Number(e.target.value))}
+          onChange={(e) => setQuantity(Math.max(effectiveMinimum, Number(e.target.value) || effectiveMinimum))}
         />
       </label>
       {packaging.length > 0 && (

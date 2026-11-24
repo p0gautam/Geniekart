@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { leadSchema } from '@/lib/validation';
+import { leadSchema, minimumOrderQuantity } from '@/lib/validation';
 import type { IncludedProduct } from '@/lib/combo';
 type Context = {
   selectedOccasion?: string;
@@ -70,11 +70,13 @@ export function QuoteButton({
   context,
   className = 'button',
   ariaLabel,
+  placement = 'general',
 }: {
   children?: React.ReactNode;
   context?: Context;
   className?: string;
   ariaLabel?: string;
+  placement?: string;
 }) {
   const open = useContext(EnquiryContext);
   return (
@@ -82,16 +84,22 @@ export function QuoteButton({
       type="button"
       aria-label={ariaLabel}
       className={className}
-      onClick={() => open(context)}
+      onClick={() => {
+        track('quote_open', { placement, item_id: context?.productId || context?.packageId || 'general' });
+        open(context);
+      }}
     >
       {children}
     </button>
   );
 }
 type Fields = z.infer<typeof leadSchema>;
-export function EnquiryForm({ context = {} }: { context?: Context }) {
+const contactSchema = leadSchema.innerType().pick({ name: true, email: true, phone: true });
+export function EnquiryForm({ context = {}, compact = false }: { context?: Context; compact?: boolean }) {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const [showDetails, setShowDetails] = useState(!compact);
+  const [attemptedSubmit, setAttemptedSubmit] = useState(false);
   const started = useRef(false);
   const submitting = useRef(false);
   const requestId = useRef('');
@@ -101,6 +109,9 @@ export function EnquiryForm({ context = {} }: { context?: Context }) {
     formState: { errors, isSubmitting },
     setValue,
     setError: setFieldError,
+    getValues,
+    clearErrors,
+    setFocus,
   } = useForm<Fields>({
     resolver: zodResolver(leadSchema),
     defaultValues: {
@@ -108,7 +119,7 @@ export function EnquiryForm({ context = {} }: { context?: Context }) {
       company: '',
       email: '',
       phone: '',
-      quantity: context.quantity || undefined,
+      quantity: Math.max(minimumOrderQuantity, context.quantity || minimumOrderQuantity),
       website: '',
       source: '/',
       utm: {},
@@ -133,6 +144,9 @@ export function EnquiryForm({ context = {} }: { context?: Context }) {
       ),
     );
   }, [setValue]);
+  useEffect(() => {
+    if (compact && showDetails) clearErrors(['company', 'quantity', 'consent']);
+  }, [compact, showDetails, clearErrors]);
   async function submit(data: Fields) {
     if (submitting.current) return;
     submitting.current = true;
@@ -172,15 +186,15 @@ export function EnquiryForm({ context = {} }: { context?: Context }) {
     ['company', 'Organization / Company', 'text'],
     ['email', 'Email Address', 'email'],
     ['phone', 'Phone / WhatsApp', 'tel'],
-    ['quantity', 'Gifts Required', 'number'],
-    ['city', 'Delivery City (optional)', 'text'],
-    ['budget', 'Budget Per Gift (optional)', 'text'],
+    ['quantity', `Gifts Required (minimum order: ${minimumOrderQuantity} kits)`, 'number'],
+    ['city', 'Delivery City / State (optional)', 'text'],
     ['occasion', 'Occasion (optional)', 'text'],
   ];
   return (
     <form
       className="enquiry-form"
       onSubmit={(event) => {
+        setAttemptedSubmit(true);
         void handleSubmit(submit)(event);
       }}
       onFocus={() => {
@@ -191,13 +205,15 @@ export function EnquiryForm({ context = {} }: { context?: Context }) {
       }}
       noValidate
     >
+      {compact && <p className="form-step-label">{showDetails ? 'Step 2 of 2 · Your gifting details' : 'Step 1 of 2 · Tell us how to reach you'}</p>}
       <div className="form-grid">
-        {fields.map(([name, label, type]) => (
+        {fields.filter(([name]) => !compact || (showDetails ? !['name', 'email', 'phone'].includes(name) : ['name', 'email', 'phone'].includes(name))).map(([name, label, type]) => (
           <label key={name}>
             {label}
             <input
               type={type}
-              min={type === 'number' ? 1 : undefined}
+              min={type === 'number' ? minimumOrderQuantity : undefined}
+              step={type === 'number' ? 1 : undefined}
               autoComplete={
                 name === 'name'
                   ? 'name'
@@ -210,22 +226,35 @@ export function EnquiryForm({ context = {} }: { context?: Context }) {
                         : undefined
               }
               {...register(name, { valueAsNumber: type === 'number' })}
+              onBlur={type === 'number' ? (event) => {
+                if (Number(event.currentTarget.value) < minimumOrderQuantity)
+                  setValue('quantity', minimumOrderQuantity, { shouldValidate: true });
+              } : undefined}
               aria-invalid={Boolean(errors[name])}
             />
-            {errors[name] && <small className="error">{String(errors[name]?.message)}</small>}
+            {errors[name] && (!compact || !showDetails || attemptedSubmit) && <small className="error">{String(errors[name]?.message)}</small>}
           </label>
         ))}
+        {(!compact || showDetails) && <label>
+          Budget per kit (optional)
+          <select {...register('budget')}>
+            <option value="">Select a budget</option>
+            <option value="Under ₹500 per kit">Under ₹500 per kit</option>
+            <option value="₹500–₹1,000">₹500–₹1,000</option>
+            <option value="₹1,000+">₹1,000+</option>
+          </select>
+        </label>}
       </div>
-      <label>
-        Message / Requirements (optional)
-        <textarea rows={3} {...register('message')} />
+      {(!compact || !showDetails) && <label>
+        Requirement / message (optional)
+        <textarea rows={compact ? 2 : 3} {...register('message')} />
         {errors.message && <small className="error">{errors.message.message}</small>}
-      </label>
+      </label>}
       <label className="honeypot" aria-hidden="true">
         Website
         <input {...register('website')} tabIndex={-1} autoComplete="off" />
       </label>
-      <label className="check">
+      {(!compact || showDetails) && <label className="check">
         <input type="checkbox" {...register('consent')} />{' '}
         <span>
           I agree to be contacted about this enquiry and to the{' '}
@@ -234,20 +263,36 @@ export function EnquiryForm({ context = {} }: { context?: Context }) {
           </a>
           .
         </span>
-      </label>
-      {errors.consent && <small className="error">Please confirm your consent.</small>}
+      </label>}
+      {(!compact || showDetails) && errors.consent && (!compact || attemptedSubmit) && <small className="error">Please confirm your consent.</small>}
       {error && (
         <p className="error" role="alert">
           {error}
         </p>
       )}
-      <button className="button lavender full" disabled={isSubmitting}>
+      {compact && !showDetails ? <button type="button" className="button lavender full" onClick={(event) => {
+        event.preventDefault();
+        const result = contactSchema.safeParse(getValues());
+        clearErrors(['name', 'phone', 'email']);
+        if (result.success) {
+          setShowDetails(true);
+          track('quote_step', { step: 2, placement: 'hero' });
+        } else {
+          for (const issue of result.error.issues) {
+            setFieldError(issue.path[0] as keyof Fields, { type: 'manual', message: issue.message });
+          }
+          const first = result.error.issues[0]?.path[0] as 'name' | 'email' | 'phone' | undefined;
+          if (first) setFocus(first);
+        }
+      }}>Continue to gift details</button> : <button className="button lavender full" disabled={isSubmitting}>
         {isSubmitting
           ? 'Saving enquiry…'
           : context.productId || context.packageId
             ? 'Get Quote'
             : 'Enquire Now'}
-      </button>
+      </button>}
+      {compact && showDetails && <button type="button" className="text-button form-back" onClick={() => setShowDetails(false)}>Back to contact details</button>}
+      <p className="form-policy-prompt">Ask us about sample kits and bulk-shipping options.</p>
       <p className="form-foot">Personalised gifting starts with a conversation.</p>
     </form>
   );

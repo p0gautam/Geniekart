@@ -22,6 +22,8 @@ export default async function Page() {
           </p>
         )}
         <p>{s.address}</p>
+        <p><a href="https://wa.me/917976682043" target="_blank" rel="noreferrer">WhatsApp: +91 79766 82043</a></p>
+        <p className="contact-socials">{s.socials.map((social) => <a key={social.label} href={social.url} target="_blank" rel="noreferrer">{social.label} ↗</a>)}</p>
       </div>
       <div className="quote-panel">
         <h2>Connect with a Specialist</h2>

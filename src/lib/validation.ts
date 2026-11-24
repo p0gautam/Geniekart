@@ -1,4 +1,5 @@
 import { z } from 'zod';
+export const minimumOrderQuantity = 20;
 export const safeUrl = z
   .string()
   .max(2000)
@@ -206,7 +207,7 @@ export const leadSchema = z
     quantity: z
       .number({ invalid_type_error: 'Please enter the number of gifts' })
       .int('Please enter a whole number')
-      .min(1, 'Please enter at least one gift')
+      .min(minimumOrderQuantity, `The minimum order is ${minimumOrderQuantity} kits`)
       .max(10000000),
     city: text.max(250).optional(),
     budget: text.max(250).optional(),

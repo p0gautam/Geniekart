@@ -5,11 +5,11 @@ export const defaults = {
   companyName: 'Geniekart',
   logo: '',
   favicon: '',
-  phone: '',
+  phone: '+91 79766 82043',
   email: '',
-  whatsapp: '',
-  address: '',
-  announcement: 'Thoughtful corporate gifts • Custom branding • Enquire for delivery options',
+  whatsapp: '917976682043',
+  address: '12, Nandpuri Rd, behind Mangal Manch, Hawa Sadak, Sharma Colony, Bais Godam, Jaipur, Rajasthan 302019',
+  announcement: 'Pan-India Express Delivery | Dispatched in 48 Hours | Trusted Courier Partners: Blue Dart, Delhivery',
   cta: 'Enquire Now',
   footerText: 'Thoughtfully curated gifts for your people and your business.',
   primaryColor: '#B92B27',
@@ -19,11 +19,25 @@ export const defaults = {
   notificationEmail: '',
   gaId: '',
   gtmId: '',
-  socials: [],
+  socials: [
+    { label: 'Instagram', url: 'https://www.instagram.com/geniekart_official/' },
+    { label: 'Facebook', url: 'https://www.facebook.com/p/Geniekart-61577174264088/' },
+  ],
 };
 export const settings = cache(async () => {
   const record = await db.siteSettings.findUnique({ where: { id: 'global' } });
-  return settingsSchema.parse(record?.data ?? defaults);
+  const saved = settingsSchema.parse(record?.data ?? defaults);
+  return {
+    ...saved,
+    phone: saved.phone || defaults.phone,
+    whatsapp: saved.whatsapp || defaults.whatsapp,
+    address: saved.address || defaults.address,
+    socials: saved.socials.length ? saved.socials : defaults.socials,
+    announcement:
+      saved.announcement === 'Thoughtful corporate gifts • Custom branding • Enquire for delivery options'
+        ? defaults.announcement
+        : saved.announcement,
+  };
 });
 export const productInclude = {
   images: { include: { media: true }, orderBy: { position: 'asc' as const } },
@@ -44,5 +58,5 @@ export async function pageSections(slug: string, preview = false) {
   });
 }
 export function whatsappUrl(number: string, name?: string) {
-  return `https://wa.me/${number}?text=${encodeURIComponent(`Hello, I'm interested in bulk corporate gifting${name ? ' for ' + name : ''}. Please share customization and quotation details.`)}`;
+  return `https://wa.me/${number}?text=${encodeURIComponent(`Hello, I'm interested in bulk corporate gifting${name ? ' for ' + name : ''}. Please share the Geniekart catalog and customization details.`)}`;
 }

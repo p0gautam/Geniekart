@@ -18,9 +18,11 @@ const lead = {
   source: '/products/test',
   utm: { utm_campaign: 'festive' },
 };
-test('enquiries require positive integer quantity and consent', () => {
+test('enquiries require at least 20 whole gifts and consent', () => {
   assert.equal(leadSchema.safeParse(lead).success, true);
   assert.equal(leadSchema.safeParse({ ...lead, quantity: 0 }).success, false);
+  assert.equal(leadSchema.safeParse({ ...lead, quantity: 19 }).success, false);
+  assert.equal(leadSchema.safeParse({ ...lead, quantity: 20 }).success, true);
   assert.equal(leadSchema.safeParse({ ...lead, quantity: 1.2 }).success, false);
   assert.equal(leadSchema.safeParse({ ...lead, consent: false }).success, false);
 });

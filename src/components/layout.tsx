@@ -16,6 +16,7 @@ export async function PublicLayout({ children }: { children: React.ReactNode }) 
         <a className="skip-link" href="#main">
           Skip to content
         </a>
+        <div className="sticky-site-top">
         {s.announcement && <div className="announcement">{s.announcement}</div>}
         <header className="site-header">
           <div className="container nav-row">
@@ -24,10 +25,11 @@ export async function PublicLayout({ children }: { children: React.ReactNode }) 
               <span>{s.companyName.toLowerCase()}</span>
             </Link>
             <HeaderNavigation />
-            <QuoteButton>{s.cta}</QuoteButton>
+            <QuoteButton ariaLabel={s.cta === 'Enquire Now' ? 'Get Custom Quote' : s.cta} placement="header" className="button header-quote"><span className="header-quote-desktop">{s.cta === 'Enquire Now' ? 'Get Custom Quote' : s.cta}</span><span className="header-quote-mobile">{s.cta}</span></QuoteButton>
             <HeaderNavigation mobile />
           </div>
         </header>
+        </div>
         <main id="main">{children}</main>
         <footer>
           <div className="container footer-grid">
@@ -60,7 +62,7 @@ export async function PublicLayout({ children }: { children: React.ReactNode }) 
             </div>
             <div>
               <h4>DIRECT SUPPORT</h4>
-              <QuoteButton className="text-button">Talk to a gifting specialist →</QuoteButton>
+              <QuoteButton className="text-button" placement="footer">Talk to a gifting specialist →</QuoteButton>
               {s.email && <a href={'mailto:' + s.email}>{s.email}</a>}
               {s.phone && <a href={'tel:' + s.phone}>{s.phone}</a>}
               <p>{s.address}</p>

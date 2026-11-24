@@ -4,8 +4,8 @@ loadEnvConfig(process.cwd());
 const db = new PrismaClient();
 async function main() {
   for (const [slug, url] of [
-    ['festive-delights-set', '/assets/festive-delights-concept.png'],
-    ['everyday-celebration-kit', '/assets/everyday-celebration-concept.png'],
+    ['festive-delights-set', '/assets/festive-delights-concept-1024.webp'],
+    ['everyday-celebration-kit', '/assets/everyday-celebration-concept-1024.webp'],
   ]) {
     const pack = await db.giftPackage.findUnique({ where: { slug } });
     if (!pack || pack.status !== 'DRAFT') continue;

@@ -37,21 +37,24 @@ export function ProductCard({
     ...(isPackage ? { packageId: item.id } : { productId: item.id }),
   };
   const url = item.images[0]?.media.url;
-  const responsive = url?.startsWith('/images/combos/');
+  const optimizedUrl = url?.startsWith('/assets/') && url.endsWith('-concept.png')
+    ? url.replace('.png', '-1024.webp')
+    : url;
+  const responsive = optimizedUrl?.startsWith('/images/combos/') || optimizedUrl?.startsWith('/assets/');
   return (
     <article className="product-card">
-      <QuoteButton className="card-main" context={context} ariaLabel={`Enquire about ${item.name}`}>
+      <QuoteButton className="card-main" context={context} placement="combo_card" ariaLabel={`Enquire about ${item.name}`}>
         <div className="product-image">
-          {url ? (
+          {optimizedUrl ? (
             <img
-              src={url}
+              src={optimizedUrl}
               alt={item.images[0].media.alt || item.name}
               loading="lazy"
               width={1024}
               height={1024}
               srcSet={
                 responsive
-                  ? `${url.replace('-1024', '-480')} 480w, ${url.replace('-1024', '-768')} 768w, ${url} 1024w`
+                  ? `${optimizedUrl.replace('-1024', '-480')} 480w, ${optimizedUrl.replace('-1024', '-768')} 768w, ${optimizedUrl} 1024w`
                   : undefined
               }
               sizes="(max-width: 767px) 46vw, (max-width: 900px) 45vw, 25vw"
@@ -70,6 +73,7 @@ export function ProductCard({
         <QuoteButton
           className="button quote-card-button"
           context={context}
+          placement="combo_get_quote"
           ariaLabel={`Get Quote for ${item.name}`}
         >
           Get Quote

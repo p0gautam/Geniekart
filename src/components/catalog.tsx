@@ -5,6 +5,7 @@ import { productInclude } from '@/lib/data';
 import { ProductCard } from './cards';
 import { QuoteButton } from './enquiry';
 import { occasions, illustrationNote } from '@/lib/occasions';
+import { DeliveryInfo } from './delivery-info';
 export type CatalogQuery = {
   q?: string;
   occasion?: string;
@@ -75,6 +76,7 @@ export async function Catalog({
         <span className="eyebrow">THOUGHTFUL GIFTS FOR YOUR BUSINESS</span>
         <h1>{title}</h1>
         <p>Explore complete gift sets for your people, milestones and celebrations.</p>
+        <DeliveryInfo />
       </div>
       <form className="catalog-toolbar" action="/corporate-gifts">
         <label>

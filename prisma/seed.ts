@@ -191,7 +191,7 @@ async function main() {
           question,
           answer:
             position === 0
-              ? 'Minimum quantities vary by product and customization. Tell us your requirements for a tailored quote.'
+              ? 'The minimum order is 20 kits. Tell us your requirements for a tailored quote.'
               : position === 1
                 ? 'Branding and packaging options depend on the selected product. Our team can discuss suitable choices.'
                 : 'Select a product or package and submit the enquiry form with your organization, contact details and quantity.',
